@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Quest 💖</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="particles">
+  <span>💖</span>
+  <span>👀</span>
+  <span>🌍</span>
+  <span>🪬</span>
+  <span>😭</span>
+</div>
+<!-- 🐱 Background Cats -->
+<div class="bg-cats">
+  <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" />
+  <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91" />
+</div>
+<div class="card">
+  <h1>💌 Love Quest</h1>
+
+  <!-- STEP 1 -->
+  <div id="step1">
+    <p>Enter your name cutie 🌸</p>
+    <input id="nameInput" placeholder="Your name 💕">
+    <button onclick="start()">Start</button>
+  </div>
+
+  <!-- STEP 2 -->
+  <div id="step2" class="hidden">
+    <p>💭 Question 1</p>
+    <h2>Do you believe in love at first sight?</h2>
+    <button onclick="nextStep('Because I did 💖')">Yes 😍</button>
+    <button onclick="nextStep('I will make you believe 💘')">Not sure 🤭</button>
+  </div>
+
+  <!-- STEP 3 -->
+  <div id="step3" class="hidden">
+    <p>🌸 Question 2</p>
+    <h2>What makes you smile the most?</h2>
+    <button onclick="nextStep('Your smile is my favorite view 😌')">Little things ✨</button>
+    <button onclick="nextStep('I hope I do 😏')">Someone special 💕</button>
+  </div>
+
+  <!-- STEP 4 -->
+  <div id="step4" class="hidden">
+    <p>😏 Pickup Line</p>
+    <h2 id="pickup"></h2>
+    <button onclick="showGift()">Next 🎁</button>
+  </div>
+
+  <!-- STEP 5 -->
+  <div id="step5" class="hidden">
+    <p>🎁 Virtual Gift</p>
+    <h2>🌹 A rose just for you 🌹</h2>
+    <p>Because you deserve all the soft love</p>
+    <button onclick="goToLock()">Final Surprise 💖</button>
+  </div>
+
+  <!-- LOCKED FINAL -->
+  <div id="final" class="hidden">
+    <h2>🔒 Locked Message</h2>
+    <p>Only the right heart can unlock this 💖</p>
+
+    <input id="passwordInput" placeholder="Enter ❤️ password">
+    <button onclick="unlock()">Unlock 💘</button>
+
+    <p id="error" class="error hidden">❌ Wrong password, try again cutie 😌</p>
+
+    <div id="secret" class="hidden">
+      <h2>💖 You unlocked my heart 💖</h2>
+      <p id="finalMsg"></p>
+      <!-- CAT LOVE MOMENT 🐱 -->
+<div id="catMoment" class="cat-moment hidden">
+  <p class="cat-title">Because I know you love cats 🐾</p>
+
+  <div class="cat-slider">
+    <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" />
+    <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91" />
+    <img src="https://images.unsplash.com/photo-1601758123927-1960a7fd4c0a" />
+
+    <!-- 🐾 PAW TAP -->
+    <span class="paw">🐾</span>
+  </div>
+</div>
+
+      <p id="newYearMsg" class="new-year hidden">
+  🌙 New Year, Same Heart 💫<br><br>
+  Everyone makes wishes for the new year…<br>
+  I just wish to walk into it with <b>you</b> 🤍
+</p>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
