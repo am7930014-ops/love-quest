@@ -89,13 +89,6 @@ function unlock() {
   }
 }
 
-function show(id) {
-  document.querySelectorAll('[id^="step"], #final').forEach(div => {
-    div.classList.add("hidden");
-  });
-
-  document.getElementById(id).classList.remove("hidden");
-}
 
 // ✨ TYPEWRITER EFFECT
 function typeWriterEffect(lines) {
