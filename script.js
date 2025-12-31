@@ -1,3 +1,4 @@
+alert("IT IS WORKING");
 let userName = "";
 let pickupLine = "";
 let currentStep = 1;
