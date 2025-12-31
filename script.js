@@ -79,9 +79,10 @@ function unlock() {
 }
 
 function show(id) {
-  document.querySelectorAll(".card > div").forEach(div => {
+  document.querySelectorAll('[id^="step"], #final').forEach(div => {
     div.classList.add("hidden");
   });
+
   document.getElementById(id).classList.remove("hidden");
 }
 
