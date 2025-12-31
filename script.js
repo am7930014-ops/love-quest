@@ -4,7 +4,7 @@ let pickupLine = "";
 let currentStep = 1;
 
 // 🔑 ❤️ CHANGE YOUR PASSWORD HERE ❤️
-const HEART_PASSWORD = "upasana";
+const HEART_PASSWORD = "1069";
 
 function start() {
   userName = document.getElementById("nameInput").value.trim();
@@ -52,11 +52,11 @@ function unlock() {
     const newYearMsg = document.getElementById("newYearMsg");
 
     const shayariLines = [
-      "Ki agar talaash karu toh koi mil hi jayega,",
-      "Magar tumhari tarah kaun mujhko chahega??",
+      "hazaro lamhe iss naye saal ke,",
+      "aapka har din muskurate huye he jaye,",
       "",
-      "Ki chahaton se dekhega zarur tumko koi,",
-      "Magar woh aankhein humari kahaan se laayega??? 💖"
+      "kabhi ho na udaas haseen chehra aappka,",
+      "mera pyaar har dukh ko harate he jaye 💖"
     ];
 
     // Show cats first
