@@ -23,8 +23,9 @@ function start() {
     return;
   }
 
-  currentStep = 2;
-  show("step2");
+  function start() {
+  currentStep=2;
+    show("step2");
 }
 
 function nextStep(line) {
