@@ -1,4 +1,4 @@
-alert("IT IS WORKING");
+alert("script loaded");
 let userName = "";
 let pickupLine = "";
 let currentStep = 1;
