@@ -24,7 +24,7 @@ function start() {
   }
 
   function start() {
-  currentStep=2;
+  currentStep = 2;
     show("step2");
 }
 
