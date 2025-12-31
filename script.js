@@ -107,3 +107,14 @@ function typeWriterEffect(lines) {
 
   type();
 }
+function show(stepId) {
+  const steps = ["step1", "step2", "step3", "step4", "step5", "final"];
+
+  steps.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add("hidden");
+  });
+
+  const active = document.getElementById(stepId);
+  if (active) active.classList.remove("hidden");
+}
