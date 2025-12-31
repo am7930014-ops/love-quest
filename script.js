@@ -116,14 +116,17 @@ function typeWriterEffect(lines) {
 
   type();
 }
-function show(stepId) {
-  const steps = ["step1", "step2", "step3", "step4", "step5", "final"];
 
-  steps.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.classList.add("hidden");
+function show(stepId) {
+  const steps = document.querySelectorAll(".step");
+  steps.forEach(step => {
+    step.style.display = "none";
   });
 
   const active = document.getElementById(stepId);
-  if (active) active.classList.remove("hidden");
+  if (active) {
+    active.style.display = "block";
+  } else {
+    console.error("Step not found:", stepId);
+  }
 }
