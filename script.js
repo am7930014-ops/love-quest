@@ -1,3 +1,11 @@
+function show(id) {
+  const steps = ["step1", "step2", "step3", "step4", "step5", "final"];
+  steps.forEach(step => {
+    const el = document.getElementById(step);
+    if (el) el.classList.add("hidden");
+  });
+  document.getElementById(id).classList.remove("hidden");
+}
 alert("script loaded");
 let userName = "";
 let pickupLine = "";
