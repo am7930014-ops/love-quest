@@ -7,10 +7,8 @@ let currentStep = 1;
 const HEART_PASSWORD = "1069";
 
 
-  currentStep = 2;function start() {
-  document.getElementById("step1").style.display = "none";
-  document.getElementById("step2").style.display = "block";
-}
+function start() {
+  currentStep = 2;
   show("step2");
 }
 
