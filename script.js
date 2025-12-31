@@ -8,6 +8,13 @@ const HEART_PASSWORD = "1069";
 
 
 function start() {
+  userName = document.getElementById("nameInput").value.trim();
+
+  if (userName === "") {
+    alert("Enter name first cutie💕");
+    return;
+  }
+
   currentStep = 2;
   show("step2");
 }
