@@ -6,13 +6,11 @@ let currentStep = 1;
 // 🔑 ❤️ CHANGE YOUR PASSWORD HERE ❤️
 const HEART_PASSWORD = "1069";
 
-function start() {
-  userName = document.getElementById("nameInput").value.trim();
-  if (userName === "") {
-    alert("Name first cutie 💕");
-    return;
-  }
-  currentStep = 2;
+
+  currentStep = 2;function start() {
+  document.getElementById("step1").style.display = "none";
+  document.getElementById("step2").style.display = "block";
+}
   show("step2");
 }
 
