@@ -56,7 +56,7 @@ function unlock() {
       "aapka har din muskurate huye he jaye,",
       "",
       "kabhi ho na udaas haseen chehra aappka,",
-      "mera pyaar har dukh ko harate he jaye 💖"
+      "mera pyaar har dukh ko harate huye jaye 💖"
     ];
 
     // Show cats first
