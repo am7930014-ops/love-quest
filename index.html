@@ -2,109 +2,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Quest 💖</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Happy New Year ❤️</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div style="position:fixed;inset:0;z-index:9999;background:transparent" onclick="alert('overlay clicked')"></div>
-<!-- Floating Hearts -->
-<div class="particles">
-    <span>💖</span>
-    <span>💞</span>
-    <span>💘</span>
-    <span>💝</span>
-    <span>💋</span>
-</div>
 
-<!-- Background Cats -->
-    <div id="catMoment" class="hidden">
-  <h2>Wait… look at these cuties 🐾</h2>
-  <img src="Cat1.jpg" width="220">
-  <img src="Cat2.jpg" width="220">
-  <img src="Cat3.jpg" width="220">
-    </div
+  <!-- STEP 1 -->
+  <div id="step1" class="step">
+    <h2>Enter your name 💕</h2>
+    <input id="nameInput" type="text" placeholder="Your name">
+    <button onclick="start()">Continue</button>
+  </div>
 
-<div class="card">
-    <h1>💌 For my Bhavuuu</h1>
+  <!-- STEP 2 -->
+  <div id="step2" class="step hidden">
+    <h2>Choose one 😌</h2>
+    <button onclick="nextStep('You are my favorite person ❤️')">Option 1</button>
+    <button onclick="nextStep('Life feels softer with you 💫')">Option 2</button>
+  </div>
 
-    <!-- STEP 1 -->
-    <div id="step1" class="step">
-        <p>Enter the name I love the most 🌸</p>
-        <input id="nameInput" placeholder="Your name 💕">
-        <button onclick="start()">Start 💖</button>
-    </div>
+  <!-- STEP 3 -->
+  <div id="step3" class="step hidden">
+    <h2>One more question 😉</h2>
+    <button onclick="nextStep('I love you endlessly 🫶')">Continue</button>
+  </div>
 
-    <!-- STEP 2 -->
-    <div id="step2" class="step hidden">
-        <p>❄ Question 1</p>
-        <h2>Did you love our year 2025 together??</h2>
-        <button onclick="nextStep('Me toooo!!!😭')">Yes 🥰</button>
-        <button onclick="nextStep('jhuth bolle kaua kaate🫣')">Not sure 😏</button>
-    </div>
+  <!-- STEP 4 -->
+  <div id="step4" class="step hidden">
+    <h2 id="pickup"></h2>
+    <button onclick="showGift()">Next 🎁</button>
+  </div>
 
-    <!-- STEP 3 -->
-    <div id="step3" class="step hidden">
-        <p>🌸 Question 2</p>
-        <h2>What makes you smile the most?</h2>
-        <button onclick="nextStep('Your smile is my favorite view 🥹')">Little things 🙂</button>
-        <button onclick="nextStep('I hope it is me 👅')">Someone special 💕</button>
-    </div>
+  <!-- STEP 5 -->
+  <div id="step5" class="step hidden">
+    <h2>A little lock 🔒</h2>
+    <button onclick="goToLock()">Unlock</button>
+  </div>
 
-    <!-- STEP 4 -->
-    <div id="step4" class="step hidden">
-        <p>If I could carry only one thing to the next year,<br>
-        it would be you Mere Bache💋💋</p>
-        <h2 id="pickup"></h2>
-        <button onclick="showGift()">Next 🎁</button>
-    </div>
+  <!-- FINAL -->
+  <div id="final" class="step hidden">
+    <h2>Enter the password ❤️</h2>
+    <input id="passwordInput" type="text">
+    <button onclick="unlock()">Unlock</button>
 
-    <!-- STEP 5 -->
-    <div id="step5" class="step hidden">
-        <p>🎁 dabba kholoooo</p>
-        <h2>🌹 A rose for my pretty waifuuu 🌹</h2>
-        <p>Because you deserve all the love in the world 👉👈</p>
-        <button onclick="goToLock()">click if you think the same 💞</button>
-    </div>
-
-    <!-- LOCK -->
-    <div id="final" class="step hidden">
-        <h2>🔒 kholo tala aur karo jhingalala😭😭</h2>
-        <p>Only my favourite person has the key 🤭</p>
-
-        <input id="passwordInput" placeholder="Enter ❤️ password">
-        <button onclick="unlock()">Unlock 💌</button>
-
-        <p id="error" class="error hidden">
-            ❌ Wrong password, try again princess 😏
-        </p>
-    </div>
-
-    <!-- SECRET -->
-    <div id="secret" class="hidden">
-        <h2>💖 You unlocked my heart 💖</h2>
-
-        <!-- CAT MOMENT -->
-        <div id="catMoment" class="cat-moment hidden">
-            <p class="us-title">We will always love each other 🤍</p>
-
-            <div class="cat-slider">
-                <img src="A.png">
-                <img src="B.jpg">
-                <span class="paw">🐾</span>
-            </div>
-        </div>
-
-        <p id="newYearMsg" class="new-year hidden">
-            365 pages of the 2025 book,<br>
-            and I would write your name on every single one 🤍<br><br>
-            May your new year 2026 be as wonderful and angelic as you are.<br>
-            Remember, every year in my life, I will always choose <b>you</b> 🤍
-        </p>
-    </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+    <p id="error" class="hidden">Wrong password 😢</p>
