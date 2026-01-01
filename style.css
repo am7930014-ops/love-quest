@@ -364,3 +364,15 @@ button:active {
   position: relative;
   z-index: 1;
 }
+/* 🔥 FORCE CLICKS TO WORK */
+button, input {
+  position: relative;
+  z-index: 1000;
+}
+
+.particles,
+.bg-cats,
+.particles *,
+.bg-cats * {
+  pointer-events: none !important;
+}
