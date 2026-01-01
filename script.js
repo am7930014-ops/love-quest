@@ -52,26 +52,38 @@ function goToLock() {
 }
 
 // 🔓 UNLOCK
+
 function unlock() {
   const input = document.getElementById("passwordInput").value.trim();
   const error = document.getElementById("error");
-  const secret = document.getElementById("secret");
 
-  if (input.toLowerCase() === HEART_PASSWORD.toLowerCase()) {
+  if (input === HEART_PASSWORD) {
     error.classList.add("hidden");
-    secret.classList.remove("hidden");
 
-    const catMoment = document.getElementById("catMoment");
-    const newYearMsg = document.getElementById("newYearMsg");
+    const cat = document.getElementById("catMoment");
+    const msg = document.getElementById("newYearMsg");
 
-    const shayariLines = [
-      "hazaro lamhe iss naye saal ke,",
-      "aapka har din muskurate huye he jaye,",
-      "",
-      "kabhi ho na udaas haseen chehra aapka,",
-      "mera pyaar har dukh ko harate huye jaye 💖"
-    ];
+    cat.classList.remove("hidden");
 
+    setTimeout(() => {
+      cat.classList.add("hidden");
+      msg.classList.remove("hidden");
+    }, 4000);
+
+    setTimeout(() => {
+      typeWriterEffect([
+        "hazaro lamhe iss naye saal ke,",
+        "aapka har din muskurate huye ho jaye.",
+        "",
+        "kabhi ho na udaas haseen chehra aapka,",
+        "mera pyaar har dukh ko haraate huye jaye 💖"
+      ]);
+    }, 6000);
+
+  } else {
+    error.classList.remove("hidden");
+  }
+}
     catMoment.classList.remove("hidden");
 
     setTimeout(() => {
