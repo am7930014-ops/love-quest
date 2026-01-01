@@ -364,13 +364,3 @@ button:active {
   position: relative;
   z-index: 1;
 }
-img {
-  border-radius: 14px;
-  margin: 10px;
-}
-
-#finalMsg {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-top: 20px;
-}
