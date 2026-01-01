@@ -1,33 +1,32 @@
-function show(id) {
-  const steps = ["step1", "step2", "step3", "step4", "step5", "final"];
-  steps.forEach(step => {
-    const el = document.getElementById(step);
-    if (el) el.classList.add("hidden");
-  });
-  document.getElementById(id).classList.remove("hidden");
-}
-alert("script loaded");
+
 let userName = "";
 let pickupLine = "";
 let currentStep = 1;
 
-// 🔑 ❤️ CHANGE YOUR PASSWORD HERE ❤️
+// 💖 CHANGE PASSWORD HERE
 const HEART_PASSWORD = "1069";
 
-
-function start() {
-  userName = document.getElementById("nameInput").value.trim();
-
-  if (userName === "") {
-    alert("Enter name first cutie💕");
-    return;
-  }
-
-  function start() {
-  currentStep = 2;
-    show("step2");
+// 🔁 STEP SWITCHER
+function show(stepId) {
+  document.querySelectorAll(".step").forEach(step => {
+    step.classList.add("hidden");
+  });
+  const active = document.getElementById(stepId);
+  if (active) active.classList.remove("hidden");
 }
 
+// ▶ START
+function start() {
+  userName = document.getElementById("nameInput").value.trim();
+  if (userName === "") {
+    alert("Enter name first cutie 💕");
+    return;
+  }
+  currentStep = 2;
+  show("step2");
+}
+
+// 👉 NEXT STEP
 function nextStep(line) {
   pickupLine = line;
 
@@ -41,15 +40,18 @@ function nextStep(line) {
   }
 }
 
+// 🎁 GIFT
 function showGift() {
   currentStep = 5;
   show("step5");
 }
 
+// 🔒 LOCK
 function goToLock() {
   show("final");
 }
 
+// 🔓 UNLOCK
 function unlock() {
   const input = document.getElementById("passwordInput").value.trim();
   const error = document.getElementById("error");
@@ -59,7 +61,6 @@ function unlock() {
     error.classList.add("hidden");
     secret.classList.remove("hidden");
 
-    // 🐱 CAT MOMENT
     const catMoment = document.getElementById("catMoment");
     const newYearMsg = document.getElementById("newYearMsg");
 
@@ -67,22 +68,19 @@ function unlock() {
       "hazaro lamhe iss naye saal ke,",
       "aapka har din muskurate huye he jaye,",
       "",
-      "kabhi ho na udaas haseen chehra aappka,",
+      "kabhi ho na udaas haseen chehra aapka,",
       "mera pyaar har dukh ko harate huye jaye 💖"
     ];
 
-    // Show cats first
     catMoment.classList.remove("hidden");
 
-    // After cats → show New Year message
     setTimeout(() => {
       catMoment.classList.add("hidden");
       newYearMsg.classList.remove("hidden");
     }, 4000);
 
-    // After New Year → start shayari typing
     setTimeout(() => {
-      typeWriterEffect(shayariLines);
+      typewriterEffect(shayariLines);
     }, 6500);
 
   } else {
@@ -90,9 +88,8 @@ function unlock() {
   }
 }
 
-
-// ✨ TYPEWRITER EFFECT
-function typeWriterEffect(lines) {
+// ✍ TYPEWRITER EFFECT
+function typewriterEffect(lines) {
   const element = document.getElementById("finalMsg");
   element.innerHTML = "";
 
@@ -104,29 +101,14 @@ function typeWriterEffect(lines) {
       if (charIndex < lines[lineIndex].length) {
         element.innerHTML += lines[lineIndex].charAt(charIndex);
         charIndex++;
-        setTimeout(type, 40); // typing speed
+        setTimeout(type, 40);
       } else {
         element.innerHTML += "<br>";
         lineIndex++;
         charIndex = 0;
-        setTimeout(type, 500); // pause between lines
+        setTimeout(type, 500);
       }
     }
   }
-
   type();
-}
-
-function show(stepId) {
-  const steps = document.querySelectorAll(".step");
-  steps.forEach(step => {
-    step.style.display = "none";
-  });
-
-  const active = document.getElementById(stepId);
-  if (active) {
-    active.style.display = "block";
-  } else {
-    console.error("Step not found:", stepId);
-  }
 }
