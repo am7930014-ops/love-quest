@@ -1,4 +1,6 @@
-
+window.onerror = function(msg, url, line) {
+  alert("JS Error at line " + line + ": " + msg);
+};
 let userName = "";
 let pickupLine = "";
 let currentStep = 1;
